@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Аналогично для других весов и стилей */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: bisque;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  /* Максимальная ширина */
+  margin: 0 auto;
+  /* Центровка */
+  padding: 0 15px;
+  /* Отступы */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+    /* Уменьшенные отступы для маленьких экранов */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 5px;
+    /* Ещё меньше отступы для телефонов */
+  }
+}
+
+a,
+p {
+  color: inherit;
+  /* Наследует цвет текста от родителя */
+  text-decoration: none;
+  /* Убирает подчеркивание */
+}
+
+a:visited {
+  color: inherit;
+  /* Для посещённых ссылок */
+}

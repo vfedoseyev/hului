@@ -1,0 +1,63 @@
+.services__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* на широких экранах 3 колонки */
+    grid-template-rows: repeat(2, auto);
+    /* на широких экранах 2 строки */
+    gap: 20px;
+}
+
+.services__card {
+    gap: 15px;
+    display: flex;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.services__card svg {
+    margin-bottom: 10px;
+}
+
+/* Сетка на экранах до 1200px (планшеты) */
+@media screen and (max-width: 1200px) {
+    .services__container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 колонки */
+        grid-template-rows: repeat(3, auto);
+        /* 3 строки */
+    }
+}
+
+/* Сетка на экранах до 768px (планшеты в портретной ориентации) */
+@media screen and (max-width: 768px) {
+    .services__container {
+        grid-template-columns: repeat(1, 1fr);
+        /* 1 колонка */
+        grid-template-rows: auto;
+        /* все карточки в одну колонку */
+    }
+}
+
+/* Сетка на экранах до 480px (мобильные устройства) */
+@media screen and (max-width: 480px) {
+    .services__container {
+        padding: 10px;
+        /* уменьшаем отступы */
+    }
+
+    .services__card {
+        padding: 15px;
+        /* уменьшаем padding внутри карточек */
+    }
+
+    .services__card svg {
+        width: 30px;
+        /* уменьшаем размер иконок */
+        height: 30px;
+    }
+}

@@ -1,0 +1,66 @@
+.aboutUs__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 колонки на широких экранах */
+    gap: 20px;
+    /* Расстояние между карточками */
+    margin: 0 auto;
+    max-width: 1400px;
+    /* Максимальная ширина контейнера */
+    box-sizing: border-box;
+}
+
+.aboutUs__item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aboutUs__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.aboutUs__item svg {
+    margin-bottom: 10px;
+}
+
+.aboutUs__item p {
+    text-align: start;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* Для планшетов (ширина экрана до 1024px) */
+@media (max-width: 1024px) {
+    .aboutUs__container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 колонки на планшетах */
+    }
+}
+
+/* Для мобильных устройств (ширина экрана до 768px) */
+@media (max-width: 768px) {
+    .aboutUs__container {
+        grid-template-columns: 1fr;
+        /* 1 колонка на мобильных */
+    }
+
+    .aboutUs__container {
+        gap: 15px;
+        /* Уменьшаем расстояние между карточками */
+        padding: 10px;
+    }
+
+    .aboutUs__item p {
+        font-size: 14px;
+        /* Уменьшаем размер текста на мобильных */
+    }
+}

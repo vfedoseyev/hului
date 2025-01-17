@@ -1,0 +1,32 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  /* Цвет стрелок */
+  font-size: 1.5rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ccc;
+  /* Цвет точек */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000;
+  /* Цвет активной точки */
+}
+
+
+
+.main {
+  color: #fff;
+  display: flex;
+  height: 900px;
+  background-image: url(../../assets/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: flex-start;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: center;
+}
