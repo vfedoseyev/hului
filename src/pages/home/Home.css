@@ -1,32 +1,71 @@
 .swiper-button-next,
 .swiper-button-prev {
-  color: #ffffff;
+  /* color: #ffffff; */
   /* Цвет стрелок */
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 
 .swiper-pagination-bullet {
-  background-color: #ccc;
+  /* background-color: #ccc; */
   /* Цвет точек */
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #000;
+  /* background-color: #000; */
   /* Цвет активной точки */
 }
 
-
-
-.main {
-  color: #fff;
-  display: flex;
-  height: 900px;
+.main-bg {
+  padding: 15px 0 40px 0;
+  width: 100%;
+  height: 90vh;
   background-image: url(../../assets/bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.main {
+  color: #fff;
+  display: flex;
+  height: 90vh;
+  /* background-image: url(../../assets/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
   align-items: flex-start;
   flex-direction: column;
   align-content: stretch;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+
+@media (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Сетка для планшетов */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Сетка для мобильных устройств */
+@media (max-width: 767px) {
+  .grid-container {
+    display: block;
+  }
+
+}
+
+.footer-bg {
+  background-color: #161723;
+  padding: 45px 0;
 }

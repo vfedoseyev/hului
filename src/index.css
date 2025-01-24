@@ -19,27 +19,21 @@ html {
 }
 
 body {
-  background-color: bisque;
+  background-color: #ffffff;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #000000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
 
 .container {
-  width: 100%;
+  /* width: 100%; */
   max-width: 1400px;
-  /* Максимальная ширина */
   margin: 0 auto;
-  /* Центровка */
   padding: 0 15px;
-  /* Отступы */
 }
 
 @media (max-width: 768px) {
@@ -65,6 +59,31 @@ p {
 }
 
 a:visited {
-  color: inherit;
+  /* color: inherit; */
   /* Для посещённых ссылок */
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+}
+section{
+  margin-top: 155px;
+}
+.link-center {
+  display: block;
+  margin: 50px auto 0 auto;
+}
+
+.orange-btn {
+  width: 100%;
+  color: #fff;
+  max-width: 280px;
+  background: #F4683F;
+  padding: 10px;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  border-radius: 20px;
 }
