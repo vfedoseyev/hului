@@ -1,15 +1,30 @@
 import React from 'react';
-import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import HeaderWhite from '../../components/headerWhite/HeaderWhite';
+import Card from '../../components/card/Card';
+import MyMap from '../../components/myMap/MyMap';
+import './Catalog.css';
 
 const Catalog = () => {
-  return (
+  return (<div>
     <div className="container">
-      <Header />
-      <h1>Каталог товаров</h1>
-      <p>Здесь будет ваш каталог товаров.</p>
-      <Footer />
+      <HeaderWhite />
+      <div className='catalog grid-container'>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+      <MyMap />
     </div>
+    <Footer />
+  </div>
   );
 };
 

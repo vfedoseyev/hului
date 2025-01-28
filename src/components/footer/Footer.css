@@ -1,3 +1,8 @@
+.footer-bg {
+    background-color: #161723;
+    padding: 45px 0;
+}
+
 .footer {
     color: white;
     display: flex;
@@ -11,4 +16,14 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-end;
+}
+@media (max-width:620px) {
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer__nav{
+        justify-content: center;
+    }
+    
 }

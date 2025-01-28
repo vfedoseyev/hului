@@ -64,6 +64,7 @@ a:visited {
 }
 
 button {
+  font-family: 'Montserrat', sans-serif;
   background: none;
   border: none;
   color: inherit;
@@ -86,4 +87,29 @@ section{
   display: block;
   text-align: center;
   border-radius: 20px;
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Сетка для планшетов */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Сетка для мобильных устройств */
+@media (max-width: 767px) {
+  .grid-container {
+    display: block;
+  }
+
 }
