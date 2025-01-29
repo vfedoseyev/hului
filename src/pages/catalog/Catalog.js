@@ -3,28 +3,43 @@ import Footer from '../../components/footer/Footer';
 import HeaderWhite from '../../components/headerWhite/HeaderWhite';
 import Card from '../../components/card/Card';
 import MyMap from '../../components/myMap/MyMap';
+import { Link } from "react-router-dom";
 import './Catalog.css';
 
 const Catalog = () => {
-  return (<div>
-    <div className="container">
-      <HeaderWhite />
-      <div className='catalog grid-container'>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+  const products = [
+    { id: 1, name: "Товар 1" },
+    { id: 2, name: "Товар 2" },
+  ];
+
+  return (
+    <div>
+      <div className="container">
+        <HeaderWhite />
+        <div className='catalog grid-container'>
+          {/* Исправленный код: теперь `map` корректно использует `product` */}
+          {products.map((product) => (
+            <Link key={product.id} to={`/product/${product.id}`}>
+              {product.name}
+            </Link>
+          ))}
+          
+          {/* Карточки товаров */}
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+        <MyMap />
       </div>
-      <MyMap />
+      <Footer />
     </div>
-    <Footer />
-  </div>
   );
 };
 

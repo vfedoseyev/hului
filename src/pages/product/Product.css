@@ -1,0 +1,121 @@
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 колонки */
+  grid-template-rows: repeat(2, 1fr);
+  /* 2 строки */
+  gap: 10px;
+  width: 100%;
+  margin: auto;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  /* закругленные углы, по желанию */
+}
+
+.main {
+  grid-column: span 2;
+  /* Занимает 2 колонки */
+  grid-row: span 2;
+  /* Занимает 2 строки */
+}
+
+.small {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* Делаем фото квадратными */
+}
+
+
+
+.title {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title__btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.specification-wrap {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+
+}
+
+.specification {
+  width: 50%;
+}
+
+.specification__parametres {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.specification__item1 {
+  gap: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.specification__item2 {
+  gap: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.specification__point1 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.specification__point2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.price {
+  padding: 25px;
+  width: 50%;
+  border: 1px solid #E1E1E1;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 #E1E1E1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.price__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Три колонки */
+  gap: 10px;
+  /* Отступы между элементами */
+  max-width: 600px;
+  /* Ограничиваем ширину */
+}
+
+.prise__item {
+  background: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
