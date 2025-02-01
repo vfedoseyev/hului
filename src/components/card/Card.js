@@ -2,12 +2,28 @@ import React from "react"
 import { Link } from 'react-router-dom';
 import './Card.css'
 import cardBg from '../../assets/card-img.jpeg'
+import LikeBtn from "../likeBtn/LikeBtn";
+
 
 const Card = () => {
+    // const images = [cardBg, cardBg, cardBg]; // Массив изображений
+    // const [currentIndex, setCurrentIndex] = useState(0);
+
+    // const prevImage = () => {
+    //     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    // };
+
+    // const nextImage = () => {
+    //     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    // };
+
+
+
     return (
         <div className='product-card'>
             <div className='product-card__img-wrapper'>
                 <img className='product-card__img' src={cardBg}></img>
+                {/* <button className="slider-btn left" onClick={prevImage}>‹</button> */}
                 <div className='visitors'>
                     <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.333984 18.3333C0.333984 16.5651 1.03636 14.8694 2.28661 13.6192C3.53685 12.369 5.23254 11.6666 7.00065 11.6666C8.76876 11.6666 10.4645 12.369 11.7147 13.6192C12.9649 14.8694 13.6673 16.5651 13.6673 18.3333H12.0007C12.0007 17.0072 11.4739 15.7354 10.5362 14.7977C9.5985 13.86 8.32673 13.3333 7.00065 13.3333C5.67457 13.3333 4.4028 13.86 3.46512 14.7977C2.52744 15.7354 2.00065 17.0072 2.00065 18.3333H0.333984ZM7.00065 10.8333C4.23815 10.8333 2.00065 8.59575 2.00065 5.83325C2.00065 3.07075 4.23815 0.833252 7.00065 0.833252C9.76315 0.833252 12.0007 3.07075 12.0007 5.83325C12.0007 8.59575 9.76315 10.8333 7.00065 10.8333ZM7.00065 9.16658C8.84232 9.16658 10.334 7.67492 10.334 5.83325C10.334 3.99159 8.84232 2.49992 7.00065 2.49992C5.15898 2.49992 3.66732 3.99159 3.66732 5.83325C3.66732 7.67492 5.15898 9.16658 7.00065 9.16658Z" fill="#727488" />
@@ -15,11 +31,7 @@ const Card = () => {
                     <span>до</span>
                     <span>99</span>
                 </div>
-                <button className="like-btn">
-                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.0004 1.90639C13.5452 -0.378355 17.4777 -0.302522 19.9293 2.1534C22.3798 4.61039 22.4643 8.5234 20.1849 11.0757L10.9983 20.2754L1.81377 11.0757C-0.465561 8.5234 -0.379978 4.6039 2.06944 2.1534C4.52319 -0.299272 8.44811 -0.381605 11.0004 1.90639ZM18.3953 3.68415C16.7703 2.05698 14.1486 1.9909 12.4478 3.5184L11.0015 4.81623L9.55419 3.51948C7.84794 1.98981 5.23169 2.05698 3.60236 3.68631C1.98819 5.30048 1.90694 7.88423 3.39436 9.59156L10.9994 17.2085L18.6044 9.59264C20.0929 7.88423 20.0116 5.30373 18.3953 3.68415Z" fill="#333333" />
-                    </svg>
-                </button>
+                <LikeBtn />
             </div>
             <div className="product-card__title">
                 <p className='product-card__name'>Новая сосновка</p>
