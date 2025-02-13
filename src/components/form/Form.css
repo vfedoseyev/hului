@@ -1,0 +1,36 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 987987987987;
+}
+
+.form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    max-width: 550px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #C0C2D7;
+}
+.form label{
+    display: flex;
+    flex-direction: column;
+}
+.form input{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #C0C2D7;
+    border-radius: 20px;
+    padding: 15px;
+
+}

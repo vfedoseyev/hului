@@ -1,29 +1,39 @@
-import React from "react"
+import React from "react";
 import { Link } from 'react-router-dom';
-import './Card.css'
-import cardBg from '../../assets/card-img.jpeg'
+import './Card.css';
+import cardBg from '../../assets/card-img.jpeg';
+import cardBg2 from '../../assets/card-img2.jpeg';
 import LikeBtn from "../likeBtn/LikeBtn";
 
+// Импортируем Swiper и его модули
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Card = () => {
-    // const images = [cardBg, cardBg, cardBg]; // Массив изображений
-    // const [currentIndex, setCurrentIndex] = useState(0);
-
-    // const prevImage = () => {
-    //     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-    // };
-
-    // const nextImage = () => {
-    //     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-    // };
-
-
-
     return (
         <div className='product-card'>
             <div className='product-card__img-wrapper'>
-                <img className='product-card__img' src={cardBg}></img>
-                {/* <button className="slider-btn left" onClick={prevImage}>‹</button> */}
+                {/* Контейнер для Swiper */}
+                <div className="swiper-container">
+                    <Swiper
+                        spaceBetween={0}
+                        slidesPerView={1}
+                        navigation
+                        pagination={{ clickable: true }}
+                        loop
+                        modules={[Navigation, Pagination]}
+                    >
+                        <SwiperSlide>
+                            <img className='product-card__img' src={cardBg2} alt="Slide 1" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className='product-card__img' src={cardBg} alt="Slide 2" />
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
                 <div className='visitors'>
                     <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.333984 18.3333C0.333984 16.5651 1.03636 14.8694 2.28661 13.6192C3.53685 12.369 5.23254 11.6666 7.00065 11.6666C8.76876 11.6666 10.4645 12.369 11.7147 13.6192C12.9649 14.8694 13.6673 16.5651 13.6673 18.3333H12.0007C12.0007 17.0072 11.4739 15.7354 10.5362 14.7977C9.5985 13.86 8.32673 13.3333 7.00065 13.3333C5.67457 13.3333 4.4028 13.86 3.46512 14.7977C2.52744 15.7354 2.00065 17.0072 2.00065 18.3333H0.333984ZM7.00065 10.8333C4.23815 10.8333 2.00065 8.59575 2.00065 5.83325C2.00065 3.07075 4.23815 0.833252 7.00065 0.833252C9.76315 0.833252 12.0007 3.07075 12.0007 5.83325C12.0007 8.59575 9.76315 10.8333 7.00065 10.8333ZM7.00065 9.16658C8.84232 9.16658 10.334 7.67492 10.334 5.83325C10.334 3.99159 8.84232 2.49992 7.00065 2.49992C5.15898 2.49992 3.66732 3.99159 3.66732 5.83325C3.66732 7.67492 5.15898 9.16658 7.00065 9.16658Z" fill="#727488" />

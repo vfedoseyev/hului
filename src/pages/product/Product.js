@@ -78,36 +78,37 @@ const Product = () => {
             </div>
           </div>
           <div className='specification__description'>
-            <p>Описание</p>
+            <p className='headline'>Описание</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
           <div className='specification__additional'>
-            <p>Дополнительные платы</p>
+            <p className='headline'>Дополнительные платы</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
           </div>
           <div className='specification__time'>
-            <p>Время заезда и выезда</p>
-            <div>
-              <span>17:00</span>
-              <span>15:00</span>
+            <p className='headline'>Время заезда и выезда</p>
+            <div className='time'>
+              <span className='time__text'>17:00</span>
+              <span> | </span>
+              <span className='time__text'>15:00</span>
             </div>
           </div>
           <div className='specification__attention'>
-            <p>Важная информация</p>
+            <p className='headline'>Важная информация</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
 
         </div>
         <div className='price'>
-          <div>Стоимость</div>
+          <div className='headline'>Стоимость</div>
           <div className='price__list'>
             <div className='prise__item'>Будни <br /> 8 000 ₽</div>
             <div className='prise__item'>Пятница <br /> 10 000 ₽</div>
             <div className='prise__item'>Залог <br /> 2 000 ₽</div>
             <div className='prise__item'>Суббота <br /> 122 000 ₽</div>
             <div className='prise__item'>Воскресенье <br /> 12 000 ₽</div>
-            <div className='prise__item'></div> {/* Пустая ячейка для выравнивания */}
+
           </div>
           <div className='price__weekend'>Полные выходные (ПТ-ВС)
             12 000 ₽</div>

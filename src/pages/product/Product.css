@@ -52,8 +52,18 @@
 
 }
 
+.headline {
+  font-weight: bold;
+}
+
+@media (max-width:900px) {
+  .specification-wrap {
+    flex-direction: column-reverse;
+  }
+}
+
 .specification {
-  width: 50%;
+  width: 100%;
 }
 
 .specification__parametres {
@@ -84,15 +94,35 @@
   gap: 5px;
 }
 
+.specification__point1 div:first-child {
+  color: #727488;
+}
+
+.specification__point1 div:last-child {
+  font-weight: bold;
+}
+
+@media (max-width:425px) {
+  .specification__point1 {
+    font-size: 14px;
+  }
+}
+
+
+
 .specification__point2 {
   display: flex;
   align-items: center;
   gap: 5px;
+  color: #727488;
 }
 
 .price {
+  position: sticky;
+  top: 0;
+  height: fit-content;
   padding: 25px;
-  width: 50%;
+  width: 100%;
   border: 1px solid #E1E1E1;
   border-radius: 25px;
   box-shadow: 0 0 10px 0 #E1E1E1;
@@ -101,6 +131,20 @@
   gap: 15px;
 }
 
+@media (max-width:900px) {
+  .price {
+    position: relative;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+@media (max-width:425px) {
+  .price {
+    padding: 10px;
+  }
+}
 
 .price__list {
   display: grid;
@@ -111,11 +155,33 @@
   max-width: 600px;
   /* Ограничиваем ширину */
 }
+@media (max-width:900px) {
+  .price__list {
+    max-width: 100%;
+  }
+}
+@media (max-width:425px) {
+  .price__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 .prise__item {
   background: #f8f8f8;
   padding: 10px;
   text-align: center;
   border-radius: 8px;
+  font-weight: bold;
+}
+
+.time {
+  padding: 5px;
+  width: fit-content;
+  border: 1px solid #C0C2D7;
+  border-radius: 15px;
+
+}
+
+.time__text {
   font-weight: bold;
 }
