@@ -1,0 +1,23 @@
+.search-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    font-size: 16px;
+}
+.searchForm {
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.searchForm__input {
+    width: 100%;
+}
+
+.search-close {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}

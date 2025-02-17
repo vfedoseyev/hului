@@ -72,6 +72,20 @@
   gap: 10px;
 }
 
+@media (max-width:900px) {
+  .specification__parametres {
+    border-bottom: 1px solid #727488;
+    padding-bottom: 10px;
+  }
+
+  .specification__time {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #727488;
+    border-top: 1px solid #727488;
+  }
+
+}
+
 .specification__item1 {
   gap: 15px;
   display: flex;
@@ -135,6 +149,8 @@
   .price {
     position: relative;
     border: none;
+    border-bottom: 1px solid #727488;
+    border-radius: 0;
     box-shadow: none;
     padding: 0;
   }
@@ -155,11 +171,13 @@
   max-width: 600px;
   /* Ограничиваем ширину */
 }
+
 @media (max-width:900px) {
   .price__list {
     max-width: 100%;
   }
 }
+
 @media (max-width:425px) {
   .price__list {
     grid-template-columns: repeat(2, 1fr);

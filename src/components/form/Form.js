@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './Form.css';
 
 const Form = ({ isVisible, closeForm }) => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [error, setError] = useState(null);
+    const formContainerRef = useRef(null);
 
     // Функция для проверки ввода только русских букв
     const onlyRussianLetters = (value) => {
@@ -40,9 +41,24 @@ const Form = ({ isVisible, closeForm }) => {
         closeForm(); // Закрываем форму после успешной отправки
     };
 
+    const handleClickOutside = (event) => {
+        if (formContainerRef.current && !formContainerRef.current.contains(event.target)) {
+            closeForm();
+        }
+    };
+
+    useEffect(() => {
+        if (isVisible) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isVisible]);
+
     return (
         <div className={`overlay ${!isVisible ? 'hidden' : ''}`}>
-            <div className="form-container">
+            <div ref={formContainerRef} className="form-container">
                 <form className='form' onSubmit={handleSubmit}>
                     <h2>Оставьте заявку</h2>
                     <p>С вами свяжется специалист, поможет рассчитать стоимость и проконсультирует по всем вопросам</p>
@@ -67,6 +83,9 @@ const Form = ({ isVisible, closeForm }) => {
                     {error && <div style={{ color: 'red' }}>{error}</div>}
 
                     <button className='orange-btn' type="submit">Отправить</button>
+
+                    {/* Добавленная кнопка закрытия формы */}
+                    <button className="close-btn" onClick={closeForm}>X</button>
                 </form>
             </div>
         </div>
