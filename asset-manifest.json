@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/huilui/static/css/main.6c9ab89a.css",
+    "main.js": "/huilui/static/js/main.3d4805c7.js",
+    "static/js/488.9c92ff38.chunk.js": "/huilui/static/js/488.9c92ff38.chunk.js",
+    "static/media/card-img.jpeg": "/huilui/static/media/card-img.1cfe090a5cdba8b0a953.jpeg",
+    "static/media/bg.png": "/huilui/static/media/bg.e8ac45360cdbc7196701.png",
+    "static/media/product.jpg": "/huilui/static/media/product.fdee5804cd2425d8fa1b.jpg",
+    "static/media/Montserrat-Bold.ttf": "/huilui/static/media/Montserrat-Bold.3530bfc1b50b41bdc29d.ttf",
+    "static/media/Montserrat-Regular.ttf": "/huilui/static/media/Montserrat-Regular.cfbf0da06d33097e6d0a.ttf",
+    "static/media/card-img2.jpeg": "/huilui/static/media/card-img2.13783ed5751689773dda.jpeg",
+    "index.html": "/huilui/index.html",
+    "main.6c9ab89a.css.map": "/huilui/static/css/main.6c9ab89a.css.map",
+    "main.3d4805c7.js.map": "/huilui/static/js/main.3d4805c7.js.map",
+    "488.9c92ff38.chunk.js.map": "/huilui/static/js/488.9c92ff38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c9ab89a.css",
+    "static/js/main.3d4805c7.js"
+  ]
+}
