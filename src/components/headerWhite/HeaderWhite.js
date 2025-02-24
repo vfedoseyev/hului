@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Burger from '../burger/Burger';
 import Phone from '../phone/Phone';
 import LogoWhite from '../logoWhite/LogoWhite';
+import RegisterBtn from '../registerBtn/RegisterBtn';
 
 
 
@@ -35,7 +36,7 @@ const HeaderWhite = () => {
         </button>
         <SearchBar />
         <Phone />
-
+        <RegisterBtn />
       </nav>
     </header>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../../components/footer/Footer';
 import HeaderWhite from '../../components/headerWhite/HeaderWhite';
 import Card from '../../components/card/Card';
@@ -7,39 +7,29 @@ import { Link } from "react-router-dom";
 import './Catalog.css';
 
 const Catalog = () => {
-  const products = [
-    { id: 1, name: "Товар 1" },
-    { id: 2, name: "Товар 2" },
-  ];
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/products.json') // Путь к JSON-файлу
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.error('Ошибка загрузки данных:', error));
+  }, []);
 
   return (
     <div>
       <div className="container">
         <HeaderWhite />
         <div className='catalog grid-container'>
-          {/* Исправленный код: теперь `map` корректно использует `product` */}
           {products.map((product) => (
-            <Link key={product.id} to={`/product/${product.id}`}>
-              {product.name}
-            </Link>
+            <Card key={product.id} product={product} />
           ))}
-          
-          {/* Карточки товаров */}
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
         </div>
         <MyMap />
       </div>
       <Footer />
     </div>
+    
   );
 };
 

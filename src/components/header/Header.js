@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Burger from '../burger/Burger';
 import Phone from '../phone/Phone';
 import Logo from '../logo/Logo';
+import RegisterBtn from '../registerBtn/RegisterBtn';
 import { HashLink } from 'react-router-hash-link';
 
 
@@ -34,7 +35,7 @@ const Header = () => {
         </button>
         <SearchBar />
         <Phone />
-
+        <RegisterBtn />
       </nav>
     </header>
   );

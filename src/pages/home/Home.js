@@ -15,7 +15,6 @@ import Footer from '../../components/footer/Footer';
 import AboutUs from '../../components/aboutUs/AboutUs';
 import Services from '../../components/services/Services';
 import Form from '../../components/form/Form';
-import RegisterForm from '../../components/registerForm/RegisterForm';
 
 
 const Home = () => {
@@ -31,7 +30,6 @@ const Home = () => {
 
     return (
         <div>
-            <RegisterForm />
             <div className='main-bg'>
                 <div className="container">
                     <main className="main">
