@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.db863cb1.css",
-    "main.js": "/static/js/main.2ffb371d.js",
-    "static/js/488.9c92ff38.chunk.js": "/static/js/488.9c92ff38.chunk.js",
-    "static/media/card-img.jpeg": "/static/media/card-img.1cfe090a5cdba8b0a953.jpeg",
-    "static/media/bg.png": "/static/media/bg.e8ac45360cdbc7196701.png",
-    "static/media/product.jpg": "/static/media/product.fdee5804cd2425d8fa1b.jpg",
-    "static/media/Montserrat-Bold.ttf": "/static/media/Montserrat-Bold.3530bfc1b50b41bdc29d.ttf",
-    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.cfbf0da06d33097e6d0a.ttf",
-    "static/media/card-img2.jpeg": "/static/media/card-img2.13783ed5751689773dda.jpeg",
-    "index.html": "/index.html",
-    "main.db863cb1.css.map": "/static/css/main.db863cb1.css.map",
-    "main.2ffb371d.js.map": "/static/js/main.2ffb371d.js.map",
-    "488.9c92ff38.chunk.js.map": "/static/js/488.9c92ff38.chunk.js.map"
+    "main.css": "/hului/static/css/main.3e2126df.css",
+    "main.js": "/hului/static/js/main.a9a610f0.js",
+    "static/js/488.9c92ff38.chunk.js": "/hului/static/js/488.9c92ff38.chunk.js",
+    "static/media/card-img.jpeg": "/hului/static/media/card-img.1cfe090a5cdba8b0a953.jpeg",
+    "static/media/bg.png": "/hului/static/media/bg.e8ac45360cdbc7196701.png",
+    "static/media/product.jpg": "/hului/static/media/product.fdee5804cd2425d8fa1b.jpg",
+    "static/media/Montserrat-Bold.ttf": "/hului/static/media/Montserrat-Bold.3530bfc1b50b41bdc29d.ttf",
+    "static/media/Montserrat-Regular.ttf": "/hului/static/media/Montserrat-Regular.cfbf0da06d33097e6d0a.ttf",
+    "static/media/card-img2.jpeg": "/hului/static/media/card-img2.13783ed5751689773dda.jpeg",
+    "index.html": "/hului/index.html",
+    "main.3e2126df.css.map": "/hului/static/css/main.3e2126df.css.map",
+    "main.a9a610f0.js.map": "/hului/static/js/main.a9a610f0.js.map",
+    "488.9c92ff38.chunk.js.map": "/hului/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db863cb1.css",
-    "static/js/main.2ffb371d.js"
+    "static/css/main.3e2126df.css",
+    "static/js/main.a9a610f0.js"
   ]
 }
