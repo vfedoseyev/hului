@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom"; // Для получения ID из URL
 import "./Product.css"; // Создай файл для стилей
 import Footer from '../../components/footer/Footer';
@@ -6,15 +6,29 @@ import HeaderWhite from '../../components/headerWhite/HeaderWhite';
 import MyMap from '../../components/myMap/MyMap';
 // import { Link } from "react-router-dom";
 
+
 const Product = () => {
-  const { id } = useParams(); // Получаем ID товара из URL
+  const { id } = useParams();
+  const [product, setProduct] = useState(null);
+  
+  useEffect(() => {
+      fetch("/data/products.json")
+          .then(res => res.json())
+          .then(data => {
+              const foundProduct = data.find(item => String(item.id) === id);
+              setProduct(foundProduct || null);
+          })
+          .catch(() => setProduct(null));
+  }, [id]);
+
+  if (!product) return <p>Товар не найден</p>;
 
   return (<>
     <div className="container">
       <HeaderWhite />
       <div className='title'>
-        <h1>Горки-Сухаревские 1</h1>
-        <div className='address'>Рублево-Успенское шоссе 24 км от МКАД</div>
+        <h1>{product.title}</h1>
+        <div className='address'>{product.address}</div>
         <div className='title__btn'>
           <div className=''>
             <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
